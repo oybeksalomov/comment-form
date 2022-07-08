@@ -68,7 +68,7 @@ $pdo = new PDO($dsn, $user, $password);
             <?php
             if (!isset($_GET['fullName']))
             {
-
+                echo '';
             } else
             {
                 $pdoStatement = $pdo->prepare("INSERT INTO `comments` (`fullName`, `nickName`, `text`) VALUES (:fullName, :nickName, :text)");
@@ -88,7 +88,7 @@ $pdo = new PDO($dsn, $user, $password);
             ?>
             <form class="form row opacity-75 justify-content-between m-auto">
                 <input type="text" class="col-12 form-control col-md py-2 me-md-2 mb-3" name="fullName" placeholder="F.I.O ni kiriting" required>
-                <input type="text" class="col-12 form-control col-md py-2 mb-3" name="nickName" placeholder="Username ni kiriting" required>
+                <input type="text" class="col-12 form-control col-md py-2 mb-3" name="nickName" placeholder="'Nickname'ingizni kiriting" required>
                 <textarea name="text" class="col-12 form-control mb-3 py-2" cols="30" rows="5" placeholder="Izoh qoldiring..."></textarea>
                 <button type="submit" class="btn btn-secondary py-2 mb-3 col-12 col-md-6" >Jo'natish</button>
             </form><hr>
